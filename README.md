@@ -4,12 +4,12 @@
 This repository contains an end-to-end exploratory data analysis (EDA) and baseline modeling pipeline for county-level cancer data. The project investigates predictors of `TARGET_deathRate` and provides reproducible code, visualizations, and model interpretation using SHAP.
 
 ## Dataset
-- File: `G10_dataset.csv` (3,047 rows × 34 columns)
+- File: `cancer_reg.csv` (3,047 rows × 34 columns)
 - Primary target: `TARGET_deathRate`
 - Notes: The dataset contains demographic, socioeconomic, and health-related features at the county level. One column (`PctSomeCol18_24`) has high missingness and may be removed or imputed during preprocessing.
 
-## What I did
-- Performed data loading and cleaning (encoding fallback), missing-value profiling, and type conversion.
+## Project Overview
+- Performed data loading and cleaning, missing-value profiling, and type conversion.
 - Conducted feature analysis using descriptive statistics and Pearson correlation with the target to identify top predictors.
 - Built a reproducible Jupyter Notebook (`G10_Code.ipynb`) that includes baseline regression experiments (Linear Regression, SVR, Random Forest) and cross-validation.
 - Interpreted models using SHAP to produce global and local feature importance explanations.
@@ -19,7 +19,7 @@ This repository contains an end-to-end exploratory data analysis (EDA) and basel
 ```
 README.md
 G10_Code.ipynb            # main analysis & modeling notebook
-G10_dataset.csv           # dataset (place in repo root or data/ folder)
+cancer_reg.csv           # dataset (place in repo root or data/ folder)
 requirements.txt
 results/                  # saved figures, model artifacts, metrics
 data/                     # optional directory for datasets
