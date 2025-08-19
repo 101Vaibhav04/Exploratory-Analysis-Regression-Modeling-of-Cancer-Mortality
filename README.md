@@ -24,7 +24,6 @@ requirements.txt
 results/                  # saved figures, model artifacts, metrics
 data/                     # optional directory for datasets
 ```
-> Tip: The original notebook referenced `data/cancer_reg.csv`. Either rename `G10_dataset.csv` to `data/cancer_reg.csv` or update the `pd.read_csv()` path in the notebook.
 
 ## Quick setup
 Create a virtual environment and install dependencies:
@@ -48,7 +47,7 @@ shap
 ```
 
 ## How to run
-1. Place `G10_dataset.csv` in the repository root (or `data/` and update the notebook path).
+1. Place `cancer_reg.csv` in the repository root (or `data/` and update the notebook path).
 2. Open the notebook:
 ```bash
 jupyter notebook G10_Code.ipynb
@@ -97,16 +96,5 @@ shap.summary_plot(shap_values, X_test)
 ## Key findings (from EDA)
 - Dataset size: 3,047 rows × 34 features.
 - Top correlated features with `TARGET_deathRate` include `PctBachDeg25_Over`, `incidenceRate`, `povertyPercent`, and `medIncome`.
-- Missingness: `PctSomeCol18_24` has ~2,285 missing values (consider dropping or imputing).
 
-## Next steps / extensions
-- Hyperparameter tuning (GridSearchCV / RandomizedSearchCV) for improved performance.
-- Advanced imputation strategies (IterativeImputer) or feature engineering.
-- Geospatial visualization (choropleth maps) to show county-level variability.
-- Deploy a Streamlit dashboard to visualize predictions and SHAP explanations for stakeholders.
 
-## License
-MIT License — feel free to reuse. Please credit the author.
-
-## Contact
-If you want me to add model metrics, CI, or set up a GitHub repo with this content, I can prepare the repo structure and provide commands for committing & pushing the files.
